@@ -1,0 +1,100 @@
+/* Theme Colors */
+:root {
+  --color-bg: #e8e2dd;
+  --color-accent: #ff7f32;
+  --color-primary: #4b5e86;
+  --color-dark: #000000;
+  --color-white: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+header, nav {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--color-accent);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(75,94,134,0.08);
+  padding: 2.5rem 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.button, button, input[type="submit"] {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:hover, button:hover, input[type="submit"]:hover {
+  background: var(--color-primary);
+}
+
+footer {
+  background: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0 1.2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f8f8f8;
+}
+
+label {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+  }
+} 
