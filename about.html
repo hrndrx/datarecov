@@ -8,14 +8,18 @@
 </head>
 <body>
   <header>
-    <h1>Data Recov</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="request-recovery.html">Request Recovery</a>
-      <a href="about.html">About Us</a>
-      <a href="faqs.html">FAQs</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a><span class="nav-separator"></span>
+      <a href="services.html">Services</a><span class="nav-separator"></span>
+      <a href="how-it-works.html">How It Works</a><span class="nav-separator"></span>
+      <a href="request-recovery.html">Request Recovery</a><span class="nav-separator"></span>
+      <a href="about.html" class="active">About Us</a><span class="nav-separator"></span>
+      <a href="faqs.html">FAQs</a><span class="nav-separator"></span>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -31,5 +35,19 @@
   <footer>
     &copy; 2024 Data Recov. All rights reserved.
   </footer>
+  <script>
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainNav = document.getElementById('mainNav');
+    hamburgerBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    // Optional: close nav when clicking a link (on mobile)
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 800) mainNav.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html> 

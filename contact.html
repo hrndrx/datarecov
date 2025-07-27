@@ -8,22 +8,26 @@
 </head>
 <body>
   <header>
-    <h1>Data Recov</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="request-recovery.html">Request Recovery</a>
-      <a href="about.html">About Us</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="contact.html">Contact</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a><span class="nav-separator"></span>
+      <a href="services.html">Services</a><span class="nav-separator"></span>
+      <a href="how-it-works.html">How It Works</a><span class="nav-separator"></span>
+      <a href="request-recovery.html">Request Recovery</a><span class="nav-separator"></span>
+      <a href="about.html">About Us</a><span class="nav-separator"></span>
+      <a href="faqs.html">FAQs</a><span class="nav-separator"></span>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
   <div class="container">
     <section>
       <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> +1 234 567 8901</p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/12345678901" target="_blank">Chat on WhatsApp</a></p>
+      <p><strong>Phone:</strong> +1 (617) 706-0003</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/16177060003" target="_blank">Chat on WhatsApp</a></p>
       <p><strong>Email:</strong> <a href="mailto:support@datarecov.com">support@datarecov.com</a></p>
       <p><strong>Office Location:</strong> 123 Recovery Ave, Kampala, Uganda</p>
       <p><strong>Live Chat:</strong> Available via Tawk.to or Crisp (see website for live chat option).</p>
@@ -32,5 +36,19 @@
   <footer>
     &copy; 2024 Data Recov. All rights reserved.
   </footer>
+  <script>
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainNav = document.getElementById('mainNav');
+    hamburgerBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    // Optional: close nav when clicking a link (on mobile)
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 800) mainNav.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html> 

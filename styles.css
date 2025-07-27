@@ -7,7 +7,13 @@
   --color-white: #fff;
 }
 
+html, body {
+  height: 100%;
+}
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
@@ -16,11 +22,45 @@ body {
   line-height: 1.6;
 }
 
-header, nav {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(75,94,134,0.07);
   background: var(--color-primary);
-  color: var(--color-white);
-  padding: 1.5rem 0 1.5rem 0;
-  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin: 0 auto 0 1rem;
+  background: none;
+  border: none;
+  z-index: 1100;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--color-white);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+nav {
+  width: 100%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0;
+  margin: 0;
 }
 
 nav a {
@@ -33,6 +73,20 @@ nav a {
 nav a:hover {
   color: var(--color-accent);
 }
+nav a.active {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.nav-separator {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2px;
+  height: 18px;
+  background: var(--color-white);
+  margin: 0 0.3rem;
+  border-radius: 2px;
+}
 
 .container {
   max-width: 900px;
@@ -41,6 +95,7 @@ nav a:hover {
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(75,94,134,0.08);
   padding: 2.5rem 2rem;
+  flex: 1 0 auto;
 }
 
 h1, h2, h3 {
@@ -69,6 +124,7 @@ footer {
   text-align: center;
   padding: 1.5rem 0;
   margin-top: 3rem;
+  flex-shrink: 0;
 }
 
 section {
@@ -90,11 +146,114 @@ label {
   color: var(--color-primary);
 }
 
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 2.5rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(75,94,134,0.10);
+  background: var(--color-bg);
+  height: 550px;
+}
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.carousel-slide.active {
+  display: block;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: var(--color-primary);
+  border: none;
+  border-radius: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.85;
+  z-index: 2;
+  transition: color 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-arrow:hover {
+  color: var(--color-accent);
+  opacity: 1;
+  background: none;
+}
+.carousel-arrow.left {
+  left: 20px;
+}
+.carousel-arrow.right {
+  right: 20px;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  border: 2px solid var(--color-white);
+  transition: background 0.2s, opacity 0.2s;
+}
+.carousel-indicator.active {
+  background: var(--color-accent);
+  opacity: 1;
+}
 @media (max-width: 600px) {
   .container {
     padding: 1rem 0.5rem;
   }
   nav a {
     margin: 0 0.5rem;
+  }
+  .carousel {
+    max-width: 100%;
+    height: 350px;
+  }
+  .carousel-slide {
+    height: 350px;
+  }
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    left: 8px;
+    right: 8px;
+    background: none;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.5rem;
+  }
+  header {
+    padding: 0;
+    margin: 0;
+    display: block;
   }
 } 

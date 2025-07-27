@@ -8,18 +8,33 @@
 </head>
 <body>
   <header>
-    <h1>Data Recov</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="request-recovery.html">Request Recovery</a>
-      <a href="about.html">About Us</a>
-      <a href="faqs.html">FAQs</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="mainNav">
+      <a href="index.html" class="active">Home</a><span class="nav-separator"></span>
+      <a href="services.html">Services</a><span class="nav-separator"></span>
+      <a href="how-it-works.html">How It Works</a><span class="nav-separator"></span>
+      <a href="request-recovery.html">Request Recovery</a><span class="nav-separator"></span>
+      <a href="about.html">About Us</a><span class="nav-separator"></span>
+      <a href="faqs.html">FAQs</a><span class="nav-separator"></span>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
   <div class="container">
+    <div class="carousel" id="carousel">
+      <img src="william-warby-ykyUSsbDviA-unsplash.jpg" class="carousel-slide active" alt="Data Recovery Lab">
+      <img src="thisisengineering-32PpagSzeGs-unsplash.jpg" class="carousel-slide" alt="Engineers at Work">
+      <img src="nick-VYfxkePredI-unsplash.jpg" class="carousel-slide" alt="Hard Drive Closeup">
+      <img src="1.jpg" class="carousel-slide" alt="Disk Image 1">
+      <img src="2.jpg" class="carousel-slide" alt="Disk Image 2">
+      <img src="3.jpg" class="carousel-slide" alt="Disk Image 3">
+      <button class="carousel-arrow left" id="carouselPrev" aria-label="Previous Slide">&#10094;</button>
+      <button class="carousel-arrow right" id="carouselNext" aria-label="Next Slide">&#10095;</button>
+      <div class="carousel-indicators" id="carouselIndicators"></div>
+    </div>
     <section>
       <h2>Lost Data? We Help You Get It Back</h2>
       <p>Professional data recovery for hard drives, SSDs, phones, and more. Fast, secure, and trusted by hundreds of clients.</p>
@@ -45,5 +60,70 @@
   <footer>
     &copy; 2024 Data Recov. All rights reserved.
   </footer>
+  <script>
+    // Carousel functionality with buttons and touch/swipe support
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const indicatorsContainer = document.getElementById('carouselIndicators');
+    let currentSlide = 0;
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+        if (indicatorsContainer.children[i]) {
+          indicatorsContainer.children[i].classList.toggle('active', i === idx);
+        }
+      });
+      currentSlide = idx;
+    }
+    // Create indicators
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
+      dot.onclick = () => showSlide(i);
+      indicatorsContainer.appendChild(dot);
+    });
+    prevBtn.onclick = () => showSlide((currentSlide - 1 + slides.length) % slides.length);
+    nextBtn.onclick = () => showSlide((currentSlide + 1) % slides.length);
+    // Auto-play every 3 seconds
+    let autoPlay = setInterval(() => showSlide((currentSlide + 1) % slides.length), 3000);
+    document.getElementById('carousel').onmouseenter = () => clearInterval(autoPlay);
+    document.getElementById('carousel').onmouseleave = () => autoPlay = setInterval(() => showSlide((currentSlide + 1) % slides.length), 3000);
+    // Touch/swipe support
+    let startX = 0;
+    let endX = 0;
+    const carousel = document.getElementById('carousel');
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+    carousel.addEventListener('touchmove', (e) => {
+      endX = e.touches[0].clientX;
+    });
+    carousel.addEventListener('touchend', () => {
+      if (startX && endX) {
+        if (startX - endX > 50) {
+          // swipe left
+          showSlide((currentSlide + 1) % slides.length);
+        } else if (endX - startX > 50) {
+          // swipe right
+          showSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+      }
+      startX = 0;
+      endX = 0;
+    });
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainNav = document.getElementById('mainNav');
+    hamburgerBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    // Optional: close nav when clicking a link (on mobile)
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 800) mainNav.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html> 
