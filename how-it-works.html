@@ -8,11 +8,6 @@
 </head>
 <body>
   <header>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
     <nav id="mainNav">
       <a href="index.html">Home</a><span class="nav-separator"></span>
       <a href="services.html">Services</a><span class="nav-separator"></span>
@@ -41,18 +36,7 @@
     &copy; 2024 Data Recov. All rights reserved.
   </footer>
   <script>
-    // Hamburger menu functionality
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mainNav = document.getElementById('mainNav');
-    hamburgerBtn.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
-    });
-    // Optional: close nav when clicking a link (on mobile)
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 800) mainNav.classList.remove('open');
-      });
-    });
+    // No carousel on this page, so no need for carousel JS
   </script>
 </body>
 </html> 
