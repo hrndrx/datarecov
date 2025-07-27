@@ -221,12 +221,6 @@ label {
   opacity: 1;
 }
 @media (max-width: 600px) {
-  .container {
-    padding: 1rem 0.5rem;
-  }
-  nav a {
-    margin: 0 0.5rem;
-  }
   .carousel {
     max-width: 100%;
     height: 350px;
