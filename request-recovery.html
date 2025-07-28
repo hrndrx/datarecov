@@ -26,25 +26,46 @@
   <div class="container">
     <section>
       <h2>Request Data Recovery</h2>
-      <form>
-        <label for="device">Device Type & Model</label>
-        <input type="text" id="device" name="device" required>
-
-        <label for="issue">Describe the Issue</label>
-        <textarea id="issue" name="issue" rows="3" required></textarea>
-
-        <label for="pickup">Pickup/Delivery Info</label>
-        <input type="text" id="pickup" name="pickup" required>
-
-        <label>
-          <input type="checkbox" name="terms" required>
-          I agree to the <a href="#" target="_blank">Terms (NDA, consent for shipping)</a>
-        </label>
-
-        <input type="submit" value="Submit Request">
-      </form>
+      <p>Choose how you'd like to proceed with your data recovery:</p>
+      
+      <div class="recovery-options">
+        <div class="option-card">
+          <h3>Start a Referral Case (Affiliate)</h3>
+          <p>Use this option to refer yourself or someone else for expert recovery service directly with our U.S. partner.</p>
+          <a href="https://case.salvagedata.com/request-help?partnerid=3990260" target="_blank" class="button">Start Referral Case</a>
+        </div>
+        
+        <div class="option-card">
+          <h3>Let Us Handle Everything (Value-Added Service)</h3>
+          <p>We offer a complete service: bring your device, and we'll handle the rest including logistics and coordination.</p>
+          <button class="button" onclick="showIframeForm()">Start Complete Service - Coming Soon</button>
+        </div>
+      </div>
+      
+      <div id="iframeFormContainer" style="display: none;">
+        <h3>Complete Recovery Service</h3>
+        <div class="iframe_partner_sdr" id="3990260"></div>
+      </div>
+      
+      <div class="service-info">
+        <h3>What to Expect</h3>
+        <ul>
+          <li><strong>Free Evaluation:</strong> In most cases, evaluation is free</li>
+          <li><strong>Secure Shipping:</strong> We handle all logistics to and from the U.S.</li>
+          <li><strong>Professional Recovery:</strong> Your device is processed in a certified U.S. lab</li>
+          <li><strong>No Recovery, No Charge:</strong> You only pay if data is successfully recovered</li>
+        </ul>
+      </div>
     </section>
   </div>
+  
+  <script src="https://case.salvagedata.com/wp-content/plugins/dk-requesthelp-steps/js/iframeForm/iframeForm.js"></script>
+  <script>
+    function showIframeForm() {
+      document.getElementById('iframeFormContainer').style.display = 'block';
+      document.getElementById('iframeFormContainer').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
   <footer>
     &copy; 2024 Data Recov. All rights reserved.
   </footer>
