@@ -261,22 +261,23 @@ label {
     font-size: 0.75rem;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: background 0.2s;
+    background: transparent;
+    transition: color 0.2s;
   }
   
   nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    color: var(--color-accent);
   }
   
   nav a.active {
-    background: var(--color-accent);
-    color: var(--color-white);
+    background: transparent;
+    color: var(--color-accent);
+    font-weight: 700;
   }
   
   .nav-separator {
     display: inline-block;
-    width: 1px;
+    width: 2px;
     height: 12px;
     background: var(--color-white);
     margin: 0 0.1rem;
