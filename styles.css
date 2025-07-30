@@ -529,6 +529,17 @@ label {
   color: var(--color-white);
 }
 
+@keyframes shake {
+  0% { transform: translateX(0) rotate(0deg); }
+  8%, 24%, 40%, 56%, 72% { transform: translateX(-8px) rotate(-3deg); }
+  16%, 32%, 48%, 64%, 80% { transform: translateX(8px) rotate(3deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+.emergency-contact .shake {
+  display: inline-block;
+  animation: shake 1.1s cubic-bezier(.36,.07,.19,.97) 1.2s infinite;
+}
+
 /* FAQ Styles */
 .faq-item {
   background: var(--color-bg);

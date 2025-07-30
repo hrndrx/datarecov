@@ -45,6 +45,18 @@
       <div class="faq-item">
         <h3>Is my data safe during international shipping?</h3>
         <p>We use secure shipping methods and work with a trusted U.S. partner. However, Data Recov is not responsible for damage or loss caused during international transit. We recommend backing up any accessible data before shipping.</p>
+        <a href="#" id="consentLink" style="color: var(--color-accent); text-decoration: underline; cursor: pointer;">Click here to consent and sign for international shipping</a>
+        <form id="consentForm" style="display:none; margin-top:1em; background:#f8f8f8; padding:1em; border-radius:8px; border:1px solid #ccc;">
+          <p><strong>By checking all boxes and signing below, you acknowledge and accept the following risks during international shipping:</strong></p>
+          <label><input type="checkbox" name="risk" required> I understand that accidents (e.g., drops, impacts) may occur during shipping.</label><br>
+          <label><input type="checkbox" name="risk" required> I understand that maritime or air transport threats (e.g., loss at sea, delays, customs) may occur.</label><br>
+          <label><input type="checkbox" name="risk" required> I understand that Data Recov is not responsible for loss or damage during international transit.</label><br>
+          <label><input type="checkbox" name="risk" required> I have backed up any accessible data before shipping.</label><br>
+          <label for="signature" style="display:block; margin-top:1em;">Type your full name as signature:</label>
+          <input type="text" id="signature" name="signature" required style="width:100%; padding:0.5em; margin-bottom:1em;">
+          <button type="submit" style="background: var(--color-accent); color: #fff; border:none; padding:0.5em 1.5em; border-radius:5px; cursor:pointer;">I Consent & Sign</button>
+        </form>
+        <div id="consentSuccess" style="display:none; color:green; margin-top:1em; font-weight:bold;">Thank you! Your consent and signature have been recorded.</div>
       </div>
       
       <div class="faq-item">
@@ -89,6 +101,36 @@
         if (window.innerWidth <= 800) mainNav.classList.remove('open');
       });
     });
+
+    // Consent form logic for international shipping
+    const consentLink = document.getElementById('consentLink');
+    const consentForm = document.getElementById('consentForm');
+    const consentSuccess = document.getElementById('consentSuccess');
+    if (consentLink && consentForm && consentSuccess) {
+      consentLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        consentForm.style.display = 'block';
+        consentLink.style.display = 'none';
+      });
+      consentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Check all checkboxes are checked
+        const checkboxes = consentForm.querySelectorAll('input[type="checkbox"]');
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        const signature = consentForm.signature.value.trim();
+        if (!allChecked) {
+          alert('Please check all boxes to acknowledge the risks.');
+          return;
+        }
+        if (!signature) {
+          alert('Please type your full name as signature.');
+          return;
+        }
+        consentForm.style.display = 'none';
+        consentSuccess.style.display = 'block';
+        // Here you could add AJAX to send the consent/signature to your server if needed
+      });
+    }
   </script>
 </body>
 </html> 
