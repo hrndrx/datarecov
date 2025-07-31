@@ -1,71 +1,64 @@
-🌐 Website Structure Plan
-1. Home Page
-•	Eye-catching intro (e.g. “Lost Data? We Help You Get It Back”)
-•	Brief about your services
-•	Testimonials or success stories
-•	Call-to-action: “Request Recovery”
-2. Services Page
-•	Clearly list what you recover:
-o	Damaged Hard Drives
-o	SSDs & USB drives
-o	Phone internal memory
-o	Formatted/Deleted files
-o	RAID/NAS systems
-•	Mention that recovery is done in partnership with a certified US facility.
-3. How It Works Page
-Explain the step-by-step recovery process:
-1.	Client submits a recovery request
-2.	You collect or receive the device
-3.	You package and ship it to your US partner
-4.	Partner recovers the data
-5.	You receive the data + device and deliver it back
-6.	Customer pays and gives feedback
-4. Request Recovery Page
-•	Online form where users:
-o	Describe the device & issue
-o	Enter pickup/delivery info
-o	Agree to Terms (NDA, consent for shipping)
-5. About Us Page
-•	Talk about:
-o	Your local team
-o	Your mission (making advanced recovery accessible)
-o	Your trusted US partner
-o	Your privacy & data protection promise
-6. FAQs Page
-•	Common questions like:
-o	How long does recovery take?
-o	Is my data safe?
-o	Do you recover deleted files?
-o	How do I know I can trust you?
-7. Contact Page
-•	Phone numbers
-•	WhatsApp chat
-•	Email support
-•	Office location
-•	Live chat (optional via Tawk.to or Crisp)
 ________________________________________
-🔁 Data Transfer & Operations Plan
-🔹 1. Client Interaction
-•	Customer fills out the recovery request
-•	You contact them and arrange for device pickup or drop-off
-🔹 2. Device Handling
-•	You log the device in a tracking system
-•	Seal it with a tamper-proof bag
-•	Sign NDA (can be digital)
-🔹 3. Shipping to USA
-•	Use DHL, Aramex, or another reliable courier
-•	Ship the sealed device to your partner’s address
-•	Track the shipment and update the client
-🔹 4. US Partner Process
-•	They perform the recovery in a secure lab
-•	Send you recovered files (via cloud or external device)
-•	Return the device via courier
-🔹 5. Delivery Back to Client
-•	You receive device and data
-•	You test the data
-•	Deliver to client (USB, drive, or cloud link)
-•	Client pays for the service
+Our Business Model
+At Reclaim Data Services, we serve as your trusted local bridge to world-class U.S. data recovery solutions. Whether you're dealing with an accidentally formatted hard drive, a failed SSD, or an unreadable external disk, we manage every step of the recovery process—securely, professionally, and with you in full control.
+Here’s how our process works:
+1. Consultation & Device Submission
+You begin by consulting with our local team. Once you're ready to proceed, we arrange for you to send us your device. After receiving it, and with your written consent, we manage the entire international logistics process on your behalf—ensuring your device is securely prepared for dispatch to our official data recovery partner, SalvageData Recovery in the United States.
+2. Secure International Shipping
+Your device is shipped using a trusted courier service—such as FedEx, UPS, or DHL—ensuring careful handling, secure transport, and full tracking visibility from start to finish.
+3. Free Evaluation & Transparent Quotation
+Once your device reaches SalvageData's certified U.S. lab, it undergoes a thorough diagnostic evaluation, which is free in most cases. After analysis, a detailed quotation is sent directly to you, outlining the cost of recovery. You remain in full control—no recovery begins without your approval.
+4. Professional Recovery Begins
+Upon your approval and payment, the recovery process is initiated within a secure cleanroom environment by certified data recovery specialists. SalvageData uses advanced tools and techniques to retrieve your data safely and efficiently.
+5. Return of Your Data and Device
+Once the recovery is complete, your retrieved data is transferred to a brand-new storage device of your preferred size. Both the new device (with your recovered data) and your original or damaged device are then securely shipped back to you.
 ________________________________________
-
-
+From start to finish, we ensure your device is treated with the utmost care, discretion, and security—while giving you full control and transparency at every stage. At Reclaim Data Services, your data doesn’t just get recovered—it gets handled with precision, integrity, and trust.
+________________________________________
+Absolutely! Here's a well-written, professional, and appealing version of the "How It Works" and "FAQs" sections for your website or brochure. They are designed to reflect clarity, trust, and customer-first language.
+________________________________________
+How It Works
+At Reclaim Data Services, we make professional data recovery easy, secure, and stress-free—while giving you full visibility and control. We connect you directly to SalvageData Recovery, a leading U.S. data recovery lab with ISO-certified cleanrooms, cutting-edge technology, and one of the highest success rates in the industry.
+Here’s a step-by-step look at how our process works:
+________________________________________
+1. Local Consultation & Device Submission
+You begin with a simple consultation with our local team. After assessing your situation and the nature of the data loss, we arrange for you to submit your device to us. You’ll remain in control every step of the way, and your written consent is always required before any shipping occurs.
+________________________________________
+2. Secure International Logistics
+Once we receive your device and your shipping approval, we take over the logistics. Your device is professionally packaged and shipped using trusted global couriers such as FedEx, DHL, or UPS, ensuring maximum security, proper handling, and complete tracking from origin to destination.
+________________________________________
+3. Expert Evaluation & Quote
+Upon arrival at SalvageData’s secure U.S. lab, your device undergoes a comprehensive diagnostic evaluation. In most cases, this evaluation is completely free. Once complete, you will receive a clear, transparent recovery quote—with no hidden fees. At this stage, you decide whether or not to proceed.
+________________________________________
+4. Recovery With Client Approval
+Recovery only begins after you approve the quote and make payment. No work is done without your explicit authorization. SalvageData’s certified engineers then begin the recovery process using industry-leading tools in a Class 100 cleanroom environment, ensuring the safest and most efficient data retrieval possible.
+________________________________________
+5. Delivery of Recovered Data
+Once the recovery is successful, your data is transferred to a brand-new storage device of your preferred capacity, and shipped back to you securely—alongside your original device (even if damaged). Everything is done with care, confidentiality, and attention to detail.
+________________________________________
+At Reclaim Data Services, we handle the complexity so you don’t have to. You stay informed, protected, and in control—from the moment you consult with us to the moment your data is safely back in your hands.
+________________________________________
+Frequently Asked Questions (FAQs)
+________________________________________
+Q: What kind of devices do you recover data from?
+We recover data from all types of storage devices, including internal and external hard drives (HDDs), solid-state drives (SSDs), USB flash drives, memory cards, RAID arrays, and more. Whether your device was accidentally formatted, physically damaged, or failed without warning—our experts can help.
+________________________________________
+Q: How do I send my device for recovery?
+Simply consult with our team locally. We’ll arrange for you to bring or send your device to us. Upon your consent, we handle the entire shipping process to the U.S. recovery lab using trusted couriers like FedEx, DHL, or UPS, ensuring it reaches the lab securely and efficiently.
+________________________________________
+Q: Do I pay before my data is recovered?
+No. You don’t pay anything upfront for evaluation. Once your device reaches the lab, you’ll receive a free diagnostic report and recovery quote. Only if you approve the quote and make payment does the recovery process begin. If no data can be recovered, you don’t pay.
+________________________________________
+Q: How long does the process take?
+The total turnaround time varies based on the complexity of the issue and shipping timelines. On average, expect the process to take between 7 to 21 business days, though expedited services may be available upon request.
+________________________________________
+Q: How do I receive my recovered data?
+Your data will be delivered to you on a brand-new external hard drive of your chosen size. This drive, along with your original (or damaged) device, is securely returned to you once the recovery is complete.
+________________________________________
+Q: Is my data kept confidential?
+Absolutely. SalvageData maintains strict data privacy protocols and is ISO 9001 & 27001 certified. Your data is never accessed or shared beyond what’s needed for recovery, and all recovery processes are handled in a secure, access-controlled lab environment.
+________________________________________
+Q: What if my data can’t be recovered?
+In the rare case that recovery is not possible, you are not charged anything. The "No Data, No Charge" policy ensures you only pay when results are delivered.
+________________________________________
 
